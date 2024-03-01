@@ -1,0 +1,24 @@
+<div class="cart">
+  <div class="cart-header">
+    <div class="cart-header-title">ADDED TO CART</div>
+  </div>   
+  <div class="cart-list" *ngFor="let cartItem of cartList">
+    <div class="cart-item">
+      <img  class="cart-item-img" src="{{ cartItem.toy__photo }}">
+      <a class="cart-item-name" [routerLink]="['/toyDetail', cartItem.toy__id]">{{ cartItem.toy__name }}</a>
+      <div class="cart-item-delete" (click)="deleteCartItem(cartItem.id)">x</div>
+      <div class="cart-item-description">{{ cartItem.toy__description }}</div>
+      <div class="cart-item-quantity">
+        <span class="btn-quantity" (click)="decreaseQuantity(cartItem.id)"> - </span>
+        <span>{{ cartItem.quantity }}</span>
+        <span class="btn-quantity" (click)="increaseQuantity(cartItem.id)"> + </span>
+      </div>  
+      <div class="cart-item-total">{{ cartItem.total }}</div>
+    </div>    
+  </div>
+  <div class="cart-total">
+    <div class="subtotal-header">Subtotal:</div>
+    <div class="subtotal-amount">$ {{ subtotalCart() }}</div>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+</div>

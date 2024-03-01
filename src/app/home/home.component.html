@@ -1,0 +1,23 @@
+<div class="banner">
+  <div class="banner-header">We'll put the fun back in your kids' lives!</div>
+  <div class="banner-detail"><b>IDEAL GIFT!</b> Our toys are the perfect 
+    birthday or Christmas present for children, providing hours of fun for 
+    budding builders to take charge of their own construction site and get 
+    hauling sand, rocks and anything else they can imagine!</div>
+  <button class="banner-btn" (click)="navToToyOverview()">SHOP NOW</button>
+  <div class="banner-img">
+    <img src="http://localhost:4200/assets/banner.jpg" >
+  </div>
+</div>
+<div class="secondary-content">
+  <div class="featured-toys">FEATURED TOYS</div>
+  <div class="toy-list">
+    <a *ngFor="let toy of toyList" class="toy-overview" [routerLink]="['/toyDetail', toy.id]">
+      <div class="toy-img">
+        <img src="{{ toy.photo }}">
+      </div>
+      <h4>{{ toy.name }}</h4>
+      <div class="toy-price">$ {{ toy.price }}</div>
+    </a>
+  </div>
+</div>

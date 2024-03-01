@@ -1,0 +1,32 @@
+{
+    "toyList": [  
+        {
+            "id": 1000,
+            "name": "Excavator",
+            "photo": "/assets/excavator.jpg",
+            "price": 19.99,
+            "description": "Remote controlled excavator toy with movable boom. Able to pick up sand and dirt!"
+        },
+        {
+            "id": 1001,
+            "name": "Dumptruck",
+            "photo": "/assets/dumptruck.jpg",
+            "price": 15.99,
+            "description": "Remote controlled dumptruck with movable loader. Able to carry sand and dirt form one site to the next!"
+        },
+        {
+            "id": 1002,
+            "name": "Backhoe",
+            "photo": "/assets/backhoe.jpg",
+            "price": 17.99,
+            "description": "Remote controlled backhoe with movable loader and pusher. Able to push sand and dirt!"
+        },
+        {
+            "id": 1003,
+            "name": "Crane",
+            "photo": "/assets/crane.jpg",
+            "price": 18.99,
+            "description": "Remote controlled crane with movable hook. Able to carry heavy loads!"
+        }
+    ]
+}

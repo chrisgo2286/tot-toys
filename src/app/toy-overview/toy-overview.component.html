@@ -1,0 +1,10 @@
+<div class="page-header">ALL TOYS</div>
+<div class="toy-list">
+    <a *ngFor="let toy of toyList" class="toy-overview" [routerLink]="['/toyDetail', toy.id]">
+        <div class="toy-img">
+            <img src="{{ toy.photo }}">
+        </div>
+        <h4>{{ toy.name }}</h4>
+        <div class="toy-price">$ {{ toy.price }}</div>
+    </a>
+</div>

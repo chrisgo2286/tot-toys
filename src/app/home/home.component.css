@@ -1,0 +1,113 @@
+.banner {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-template-areas: 
+        "header header header header image image"
+        "detail detail detail detail image image"
+        "button button button button image image"
+    ;
+    background-color: var(--color2);
+    height: 300px;
+    min-width: 670px;
+    margin-top: 20px;
+}
+
+.banner-header {
+    grid-area: header;
+    text-align: center;
+    align-self: last baseline;
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+}
+
+.banner-detail {
+    grid-area: detail;
+    text-align: center;
+    align-self: center;
+    font-size: 12px;
+    margin: 0px 10px;
+}
+
+.banner-btn {
+    grid-area: button;
+    width: 100px;
+    height: 30px;
+    background-color: var(--color3);
+    border-radius: 20px;
+    border: 2px solid var(--fontColor);
+    font-weight: bolder;
+    margin-top: 15px;
+    justify-self: center;
+}
+
+.banner-btn:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.banner-img {
+    grid-area: image;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-img img {
+    width: auto;
+    height: 60%;
+}
+
+@media screen and (min-width: 768px) {
+    .banner-header {
+        font-size: 40px;
+    }
+    .banner-detail {
+        font-size: 15px;
+    }
+    .banner-img img {
+        height: 70%;
+    }
+}
+
+.toy-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(autofit, 300px);
+    gap: 5px;
+    margin: 10px auto;
+    max-width: 1200px;
+}
+
+.toy-overview {
+    display: grid;
+    grid-template-rows: 80% 10% 10%;
+    justify-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    text-decoration: None;
+}
+
+.toy-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toy-img img {
+    width: 60%;
+    height: auto;
+}
+
+.toy-price {
+    font-size: 14px;
+}
+
+.toy-overview:hover {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.toy-overview > * {
+    margin: 3px 0px;
+}

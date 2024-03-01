@@ -1,0 +1,13 @@
+<div class="toy-detail">
+    <img class="toy-detail-photo" src="{{ toy?.photo }}" />
+    <div class="toy-detail-name">{{ toy?.name }}</div>
+    <div class="toy-detail-description">{{ toy?.description }}</div>
+    <div class="toy=detail-price">Price: $ {{ toy?.price }}</div>
+    <button class="add-cart-btn" (click)="addToCart(toyId)">ADD TO CART</button>
+</div>
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <div class="modal-text">Added to Cart!</div>
+        <button class="modal-btn" (click)="exitModal()">Ok</button>
+    </div>
+</div>
