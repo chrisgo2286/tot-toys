@@ -16,10 +16,23 @@ export class AppComponent {
   navToToyOverview(): void {
     const searchInput = <HTMLInputElement>document.getElementById("search");
     const searchText = (searchInput) ? searchInput.value: null; 
-    this.router.navigate(
-      ['/', 'toyOverview'],
-      { queryParams: { search: searchText }}
-    )
+    const url = this.router.url;
+    
+    if(url.includes('toyOverview')) {
+      this.router.navigate(
+        ['/']
+      ) .then(() => {
+        this.router.navigate(
+          ['/', 'toyOverview'],
+          { queryParams: { search: searchText }}
+        )
+      })
+    } else {
+      this.router.navigate(
+        ['/', 'toyOverview'],
+        { queryParams: { search: searchText }}
+      )
+    }
   }
 
   constructor ( private router: Router ) {}
