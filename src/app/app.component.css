@@ -24,6 +24,15 @@ nav a:hover {
     cursor: pointer;
 }
 
+.nav-right a {
+    margin: 0px;
+}
+
+.nav-right span {
+    margin: 0px 30px 0px 10px;
+    font-weight: bolder;
+}
+
 .search {
     display: flex;
     border-radius: 25px;
